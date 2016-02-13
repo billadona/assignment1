@@ -1,0 +1,27 @@
+postman headers:
+alt-svc = Alternative service - allows resources to be available at a separate network location
+alternate-protocol = help reduce web latency
+cache-control = determines how to handle cache
+content encoding = determines which algorithm to use for this message. gzip is the format of unix program
+content-type = indicates the MIME type of served data
+date = when it was accessed
+etag = determines the change in content of a resource at a given URL
+expires = when the site was ended
+server = server used
+status = determines if there was an error or successful
+vary = lists the headers used as criteria for choosing a specific content by the web server.
+x-content-type option = prevents web browser from MIME-sniffing
+x-frame-options = provides clickjacking protection
+x-xss-protection = enables the cross-site scripting thats built in in the web browsers
+
+SoapUI headers:
+X-AspNet-Version = tells the version being used
+vary = lists the headers used as criteria for choosing a specific content by the web server.
+date = date accessed
+Content-Length = indicates the size of the entity-body
+status = determines if the request is success or if theres an error
+content encoding = determines which algorithm to use for this message. gzip is the format of unix program
+content-type = indicates the MIME type of served data
+server = server used
+X-powered-by = specifies the technology supporting the web application
+cache-control = determines how to handle cache
