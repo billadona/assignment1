@@ -1,0 +1,34 @@
+{
+	"id": "57636a93-c399-7642-cef4-68973c9f14b3",
+	"name": "assignment 1",
+	"description": "",
+	"order": [
+		"0eac5de9-f1c7-58f3-8420-b8a20b8c5f58"
+	],
+	"folders": [],
+	"timestamp": 0,
+	"owner": "303547",
+	"remoteLink": "https://www.getpostman.com/collections/2198761403c06bc65a44",
+	"public": false,
+	"requests": [
+		{
+			"id": "0eac5de9-f1c7-58f3-8420-b8a20b8c5f58",
+			"headers": "",
+			"url": "https://www.googleapis.com/books/v1/volumes?q=turing;",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "var jsonData = JSON.parse(responseBody);                    // parse the response\r\nvar title = jsonData.items[0].volumeInfo.title;             // title will contain title of the book\r\nconsole.log(\"title \" + title);                              // output the title to the console window\r\nvar patt = /turing/i;                                       // will be used to test the titles from the JSON data\r\nvar res = patt.test(title);                                 // test if the title stored is equal to var patt\r\nconsole.log(res);                                           // output a boolean that tells if its true or not\r\n\r\ntests[\"book title1\"] = res === true;                        // tests if res is equal to the value\r\ntests[\"book title\"] = responseBody.has(\"turing\");           // test if response body has the word \"turing\"\r\ntests[\"total items\"] = jsonData.totalItems > 1              // test if theres more than 1 book that has the same title\r\ntests[\"Status code is 200\"] = responseCode.code === 200;    // test if the status is 200 ",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1455162146199,
+			"name": "https://www.googleapis.com/books/v1/volumes?q=turing;",
+			"description": "",
+			"collectionId": "57636a93-c399-7642-cef4-68973c9f14b3",
+			"responses": []
+		}
+	]
+}
